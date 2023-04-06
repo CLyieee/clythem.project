@@ -1,0 +1,305 @@
+/* Global styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+/* Header styles */
+header {
+  
+  color: #fff;
+  padding: 20px;
+  position: relative; /* make header positioned as a reference for cover-image */
+}
+
+.cover-image {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* increase z-index to move cover image in front of header */
+}
+
+.cover-image img {
+  max-width: 100%;
+  background-size: 20px;
+  margin-bottom: 70px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.profile-picture {
+  position: relative;
+  top: 90px;
+  display: inline-block;
+  z-index: 1; 
+}
+
+.profile-picture img {
+  border-radius: 50%;
+  border: 3px solid #fff;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.profile-picture-overlay {
+	position: relative;
+	top: 500px;
+	right: 0;
+	background-color: #fff;
+	color: #3b5998;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.profile-picture-overlay i {
+	font-size: 1.2rem;
+}
+
+.profile-picture:hover .profile-picture-overlay {
+	opacity: 1;
+}
+
+.profile-info h1 {
+  color: black;
+	font-size: 2rem;
+	margin-top: 50px;
+	margin-bottom: 10px;
+   z-index: 1;
+}
+
+.profile-info p {
+	font-size: 1.2rem;
+	color: #999;
+	margin-bottom: 20px;
+   z-index: 1;
+}
+
+.profile-action-buttons {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+   z-index: 1;
+}
+
+.profile-action-buttons button {
+	margin-right: 10px;
+   z-index: 1;
+}
+
+.profile-tabs {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+   top: 200px;
+	margin-bottom: 10px;
+   z-index: 1;
+}
+
+.profile-tabs ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.profile-tabs li {
+	margin-right: 10px;
+}
+
+.profile-tabs a {
+	color: #050505;
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+
+.profile-tabs a:hover {
+	text-decoration: underline;
+}
+
+.profile-tab-action button {
+	margin-left: 10px;
+}
+
+/* Post styles */
+.post {
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #ddd;
+}
+
+.post-header {
+	display: flex;
+
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.post-profile-picture {
+	border-radius: 50%;
+	border: 2px solid #3b5998;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	margin-right: 10;
+}
+.post-profile-picture img {
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+
+.post-header-info {
+display: flex;
+    bottom: 100px;
+flex-direction: column;
+}
+
+.post-header-info h2 {
+font-size: 1.2rem;
+margin-bottom: 5px;
+}
+
+.post-header-info p {
+font-size: 1rem;
+color: #999;
+}
+
+.post-body {
+margin-bottom: 20px;
+}
+
+.post-body p {
+font-size: 1.2rem;
+line-height: 1.5;
+margin-bottom: 10px;
+}
+
+.post-actions {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.post-actions button {
+background-color: transparent;
+border: none;
+color: #3b5998;
+font-size: 1.2rem;
+margin-right: 10px;
+cursor: pointer;
+}
+
+.post-comments {
+display: flex;
+flex-direction: column;
+}
+
+.post-comment {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.post-comment img {
+border-radius: 50%;
+border: 2px solid #3b5998;
+width: 40px;
+height: 40px;
+object-fit: cover;
+margin-right: 10px;
+}
+
+.post-comment-info h3 {
+font-size: 1.2rem;
+margin-bottom: 5px;
+}
+
+.post-comment-info p {
+font-size: 1rem;
+color: #999;
+}
+
+.post-comment-form {
+display: flex;
+align-items: center;
+margin-top: 10px;
+}
+
+.post-comment-form img {
+border-radius: 50%;
+border: 2px solid #3b5998;
+width: 40px;
+height: 40px;
+object-fit: cover;
+margin-right: 10px;
+}
+
+.post-comment-form input[type="text"] {
+border: none;
+border-bottom: 2px solid #ddd;
+font-size: 1.2rem;
+margin-right: 10px;
+padding: 5px;
+width: 100%;
+}
+
+.post-comment-form button {
+background-color: #3b5998;
+color: #fff;
+border: none;
+padding: 5px 10px;
+font-size: 1.2rem;
+cursor: pointer;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+.profile-info {
+padding-top: 50px;
+}
+  .profile-picture img {
+	width: 100px;
+	height: 100px;
+}
+
+.post-header-info h2 {
+	font-size: 1rem;
+}
+
+.post-header-info p {
+	font-size: 0.8rem;
+}
+
+.post-comment-form input[type="text"] {
+	font-size: 1rem;
+}
+
+.post-comment-form button {
+	font-size: 1rem;
+	padding: 5px;
+}
+.post-content img {
+max-width: 300px;
+}

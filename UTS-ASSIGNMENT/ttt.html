@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<style>
+		/* Styles for screens with a width of 768px or less (i.e. mobile screens) */
+@media only screen and (max-width: 768px) {
+  /* Adjust the font size */
+  body {
+    font-size: 16px;
+  }
+
+  /* Adjust the layout */
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Styles for screens with a width greater than 768px (i.e. desktop screens) */
+@media only screen and (min-width: 768px) {
+  /* Adjust the font size */
+  body {
+    font-size: 18px;
+  }
+
+  /* Adjust the layout */
+  .container {
+    flex-direction: row;
+  }
+}
+
+    body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+
+		form {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			padding: 20px;
+			margin: 20px auto;
+			width: 300px;
+		}
+
+		input[type="number"], input[type="button"] {
+			font-size: 16px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin-bottom: 10px;
+			display: block;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		input[type="button"] {
+			background-color: #4CAF50;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		input[type="button"]:hover {
+			background-color: #2E8B57;
+		}
+
+		input[type="number"]:focus {
+			border-color: #4CAF50;
+			box-shadow: 0 0 5px #4CAF50;
+		}
+
+		input[type="number"][readonly] {
+			background-color: #eee;
+			color: #888;
+			cursor: default;
+		}
+
+		#result {
+			font-weight: bold;
+		}
+	</style>
+	<script>
+		function add() {
+			var num1 = parseInt(document.getElementById("num1").value);
+			var num2 = parseInt(document.getElementById("num2").value);
+			var result = num1 + num2;
+			document.getElementById("result").value = result;
+		}
+
+		function subtract() {
+			var num1 = parseInt(document.getElementById("num1").value);
+			var num2 = parseInt(document.getElementById("num2").value);
+			var result = num1 - num2;
+			document.getElementById("result").value = result;
+		}
+
+		function multiply() {
+			var num1 = parseInt(document.getElementById("num1").value);
+			var num2 = parseInt(document.getElementById("num2").value);
+			var result = num1 * num2;
+			document.getElementById("result").value = result;
+		}
+
+		function divide() {
+			var num1 = parseInt(document.getElementById("num1").value);
+			var num2 = parseInt(document.getElementById("num2").value);
+			var result = num1 / num2;
+			document.getElementById("result").value = result;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="number" id="num1" placeholder="Enter number 1">
+		<input type="number" id="num2" placeholder="Enter number 2">
+		<input type="button" value="Add" onclick="add()">
+		<input type="button" value="Subtract" onclick="subtract()">
+		<input type="button" value="Multiply" onclick="multiply()">
+		<input type="button" value="Divide" onclick="divide()">
+		<input type="number" id="result" placeholder="Result" readonly>
+	</form>
+</body>
+</html>
