@@ -1,0 +1,187 @@
+/*body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-image: url('cool-backgrund.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+
+
+
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+*/
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+  
+
+
+}
+
+section {
+  background-image: url('cool-background');
+  background-size: 100px;
+  
+  box-shadow: 0 0 10px rgba(57, 255, 20, 1.2);
+
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+p {
+  color: #fff;
+    -webkit-text-stroke: 1px #39ff14;
+  }
+  
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #808080;
+
+  position: relative;
+  bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #808080;
+  
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+input[type=submit] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Add the following CSS rules to the existing code */
+
+/* Select the element with the class "typewriter" */
+.typewriter {
+color: #39ff14;
+
+overflow: auto;
+font-size: 18px;
+  font-style: bold;
+border-right: .15em solid #00FF7F;
+white-space: nowrap;
+margin: 0 auto;
+letter-spacing: .20em;
+animation: typing 3s steps(100, end), blink-caret .75s step-end infinite;
+}
+
+/* Define the "typing" animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Define the "blink-caret" animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: white;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}
+
+.profile {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-pic {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 1.2);
+  position: relative;
+  top: 10px;
+  left: 195px;  
+}
+
+.profile:before {
+  content: flex;
+  display: block;
+  padding-bottom: 100%;
+}
+
+.profile:hover .profile-pic {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
